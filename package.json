@@ -1,0 +1,11 @@
+{
+  "name": "travel-nomad",
+  "version": "1.0.0",
+  "description": "Digital Nomad Travel Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chet Hill",
+  "license": "ISC"
+}
