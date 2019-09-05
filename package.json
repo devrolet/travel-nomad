@@ -4,13 +4,14 @@
   "description": "Digital Nomad Travel Website",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon server"
+    "start": "nodemon server"
   },
   "author": "Chet Hill",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "pug": "^2.0.4"
   }
 }
