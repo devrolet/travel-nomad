@@ -1,4 +1,27 @@
 extends ../layout/index
 
 block content
-    h1 Digital Nomad Travel Guide - About Us
+    main.container.mt-5
+        .row
+            .col-md-5
+                img.img-fluid(src="/img/about.jpg" alt="About Image")
+            .col-md-7
+                h1 #{pageTitle}
+                blockquote In hac habitasse platea dictumst. Nunc nisl diam, elementum vitae convallis in, ullamcorper ac justo. Mauris eu bibendum nunc. Sed felis tellus, mollis quis aliquam non, luctus eget arcu. Pellentesque vitae sollicitudin eros. Vivamus varius interdum metus ut molestie. In molestie a mi ultricies pulvinar.
+                p Mauris volutpat lorem id sollicitudin faucibus. Curabitur eros leo, mollis eget facilisis in, posuere id orci. Cras hendrerit aliquet dictum. Donec lacinia ex dolor, quis lobortis arcu auctor sed. Maecenas tristique urna quam, sed fringilla dui mattis accumsan. Nunc bibendum enim sed lectus sodales feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec quis iaculis lorem. In vel erat eros. Vivamus in eros convallis, dapibus mi ut, posuere libero. Quisque nisl magna, pharetra quis sodales sit amet, placerat sed sapien. Quisque imperdiet leo vel est dignissim, vel ullamcorper purus aliquam.
+                p Aenean vulputate urna at tellus bibendum pulvinar. Maecenas vestibulum nec tortor vitae ornare. Pellentesque quis libero sit amet nisl tincidunt aliquam eget eget felis. Donec vitae purus eget mi ultrices vestibulum ut vitae arcu. Curabitur cursus eget nisl efficitur blandit. Pellentesque efficitur et nibh non porttitor.
+    .icons-list
+        .container.mt-5.py-5.text-center
+            .row
+                .col-md-4
+                    img.img-fluid.mb-4(src="/img/icon_trust.svg")
+                    h2.mb-4 Trust & Safety
+                    p Aenean vulputate urna at tellus bibendum pulvinar. Maecenas vestibulum nec tortor vitae ornare.
+                .col-md-4
+                    img.img-fluid.mb-4(src="/img/icon_destiny.svg")
+                    h2.mb-4 Best Destination
+                    p Mauris volutpat lorem id sollicitudin faucibus. Curabitur eros leo, mollis eget facilisis
+                .col-md-4
+                    img.img-fluid.mb-4(src="/img/icon_price.svg")
+                    h2.mb-4 Best Price
+                    p In hac habitasse platea dictumst. Nunc nisl diam, elementum vitae convallis in Maecenas vestibulum nec.
