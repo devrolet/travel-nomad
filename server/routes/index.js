@@ -25,6 +25,20 @@ module.exports = function() {
             }));
         
     });
+
+    router.get('/travels/:id', (req, res) => {
+       Travels.findByPk(req.params.id)
+            .then(travel => res.render('travel', {
+                travel
+            }))
+    });
+
+    router.get('/testimonials', (req, res) => {
+        res.render('testimonials', {
+            pageTitle: 'Testimonials'
+        });
+        // res.send('Testimonials')
+    });
     
     // router.get('/services', (req, res) => {
     //     res.send('Services');
