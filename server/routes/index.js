@@ -8,10 +8,20 @@ const Testimonials = require('../models/Testimonials');
 module.exports = function() {
     // homepage url
     router.get('/', (req, res) => {
-        res.render('index', {
-            pageTitle: 'Home',
-            className: 'home'
-        });
+        const promises = [];
+
+        promises.push(Travels.findAll({limit: 3}) )
+        promises.push(Testimonials.findAll({limit: 3}) )
+
+        const result = Promise.all(promises);
+
+            result.then(result => res.render('index', {
+            pageTitle   : 'Home',
+            className   : 'home',
+            travels     : result[0],
+            testimonials: result[1]
+        }))
+        .catch(err => console.log(err));
     });
     router.get('/about', (req, res) => {
         res.render('about', {
