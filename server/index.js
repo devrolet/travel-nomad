@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const routes = require('./routes');
+const bodyParser = require('body-parser');
 
 // import DB connection
 const db = require('./config/database');
@@ -38,6 +39,9 @@ app.use((req, res, next) => {
 
 // pass sitename to views
 app.locals.siteTitle = config.sitename;
+
+// enable body parser
+app.use(bodyParser.urlencoded({extended: true}));
 
 // listen for the home page
 app.use('/', routes() );
