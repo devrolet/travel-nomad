@@ -1,4 +1,23 @@
 extends ../layout/index
-
+block slider
+    .slider
+        h1 Rio De Janeiro
+        em adventure awaits
 block content
-    h1 Welcome to Digital Nomad Travel Guide
+    main.container.mt-5 
+        h2.text-center.mb-5 About Us
+        .row.mb-5
+            .col-md-6
+                p.text-right Curabitur ullamcorper metus a odio rutrum, at eleifend ante ultrices. Morbi diam nunc, hendrerit non justo sit amet, euismod tempus eros. 
+                p.text-right Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget fringilla arcu. Etiam ornare, mi ac pulvinar pulvinar, odio nulla ornare tortor, vel vehicula nibh metus et eros. Donec a nisi aliquam, elementum quam at, malesuada lectus. Vivamus quis nulla quis eros condimentum aliquet ut et augue.
+            .col-md-6
+                img(src="/img/about_home.jpg", alt="About Us Image", class="img-fluid")
+    .discount
+        .container
+            .row
+                .col-md-6
+                    .content
+                        h3 5% OFF
+                        p.title Travel to Canada
+                        p.date September 20th, 2019 - September 28th, 2019
+                        p.price $2,500 USD

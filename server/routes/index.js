@@ -9,7 +9,8 @@ module.exports = function() {
     // homepage url
     router.get('/', (req, res) => {
         res.render('index', {
-            pageTitle: 'Home'
+            pageTitle: 'Home',
+            className: 'home'
         });
     });
     router.get('/about', (req, res) => {
@@ -34,8 +35,7 @@ module.exports = function() {
             }))
     });
 
-    router.get('/testimonials', (req, res) => {
-        
+    router.get('/testimonials', (req, res) => { 
         Testimonials.findAll()
             .then(testimonials => res.render('testimonials', {
                 pageTitle: 'Testimonials',
@@ -62,14 +62,18 @@ module.exports = function() {
         console.log(errors);
         // check for errors
         if(errors.length > 0) {
-            // display the warning to the view
-            res.render('testimonials', {
-                pageTitle: 'Testimonials',
-                errors,
-                name,
-                email,
-                message
-            })
+
+            Testimonials.findAll()
+                .then(testimonials => res.render('testimonials', {
+                    // display the warning to the view
+                    pageTitle: 'Testimonials',
+                    errors,
+                    name,
+                    email,
+                    message,
+                    testimonials
+            }));
+            
         } else {
             // save to db
             Testimonials.create({
