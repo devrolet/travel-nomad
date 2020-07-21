@@ -7,9 +7,9 @@ const bodyParser = require('body-parser');
 const db = require('./config/database');
 
 // test the connection
-// db.authenticate()
-//     .then(() =>console.log('Database connected'))
-//     .catch(error => console.log(error));
+db.authenticate()
+    .then(() =>console.log('Database connected'))
+    .catch(error => console.log(error));
 
 // import configurations
 const configs = require('./config');
